@@ -1,71 +1,44 @@
-PostForge – Blog Application
+# 🚀 PostForge – Blog Application
 
-A simple and functional blog application built with Node.js, Express, MongoDB, and EJS.
-Includes JWT authentication, password hashing, blog creation, and commenting system.
+A simple and functional blog application built with *Node.js, Express, MongoDB, and EJS*.  
+Includes *JWT authentication, password hashing, blog creation, and a **commenting system*.
 
-🚀 Features
-Authentication
+---
 
-User signup & login
+## ✨ Features
 
-JWT-based auth
+### 🔐 Authentication
+- User Signup & Login
+- JWT-based Authentication
+- Hashed Passwords (secure user storage)
 
-Hashed passwords (secure user storage)
+### 📝 Blog System
+- Create Blog Posts
+- Upload Cover Images
+- View Individual Blogs
+- Author Information Displayed on Each Post
 
-Blog System
+### 💬 Comments
+- Users Can Add Comments on Blogs
+- Comments Linked With User and Blog
 
-Create blog posts
+---
 
-Upload cover images
+## 🧰 Tech Stack
 
-View individual blogs
+| Technology | Usage |
+|-----------|--------|
+| Node.js | Backend Runtime |
+| Express.js | Server Framework |
+| MongoDB + Mongoose | Database & ODM |
+| EJS | Templating Engine |
+| Multer | File Uploads |
+| JSON Web Token (JWT) | Secure Sessions |
+| bcrypt | Password Hashing |
 
-Author info displayed on each post
+---
 
-Comments
-
-Users can add comments on blogs
-
-Comments linked with user and blog
-
-Tech Stack
-
-Node.js
-
-Express.js
-
-MongoDB + Mongoose
-
-EJS templating
-
-Multer for file uploads
-
-JWT for secure sessions
-
-bcrypt for password hashing
-
-📁 Folder Structure (Short Overview)
-/models        → User, Blog, Comment schemas
-/routes        → Auth, Blog, Comment routes
-/views         → EJS pages
-/uploads       → Uploaded images (ignored in git)
-
-🔐 Environment Variables
-
-Create a .env file:
-
-MONGO_URL=your_mongo_connection_string
-JWT_SECRET=your_secret_key
-PORT=3000
-
-▶️ Running the App
-npm install
-npm start
-
-
-App runs at:
-
-http://localhost:8001
+## 📁 Folder Structure (Short Overview)
 
 📝 Notes
 
