@@ -1,57 +1,65 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">PostForge</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" href="/">
+      <i class="fas fa-fire-alt"></i> ThoughtDock
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="/">
+            <i class="fas fa-home"></i> Home
+          </a>
         </li>
 
         <% if (locals.user) { %>
-             <li class="nav-item">
-          <a class="nav-link" href="/blog/add-new">Add Blog</a>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/add-new">
+            <i class="fas fa-pen-fancy"></i> Create
+          </a>
         </li>
 
-           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Daksh panwar
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" role="button" data-bs-toggle="dropdown">
+            <i class="fas fa-user-circle"></i>
+            <span><%= user.fullName || user.email %></span>
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/user/logout">LogOut</a></li>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a class="dropdown-item" href="/user/logout">
+                <i class="fas fa-sign-out-alt me-2"></i> Logout
+              </a>
+            </li>
           </ul>
         </li>
-        
-   
+
         <% } else { %>
 
-            <li class="nav-item">
-          <a class="nav-link" href="/user/signup">Create account</a>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/signin">
+            <i class="fas fa-sign-in-alt"></i> Sign In
+          </a>
         </li>
 
-              <li class="nav-item">
-          <a class="nav-link" href="/user/signin">sign in</a>
+        <li class="nav-item">
+          <a href="/user/signup" class="btn btn-primary btn-sm ms-2">
+            <i class="fas fa-user-plus"></i> Sign Up
+          </a>
         </li>
-                 <% } %>
+        <% } %>
       </ul>
-     
     </div>
   </div>
 </nav>
 
-
-<div class="container">
 <% if (locals.error) { %>
- <div class="alert alert-danger" role="alert">
-  <%= locals.error %>
+<div class="container mt-3">
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <i class="fas fa-exclamation-triangle me-2"></i>
+    <strong>Oops!</strong> <%= locals.error %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  </div>
 </div>
 <% } %>
-</div>
-
- 
-
- 
-
-

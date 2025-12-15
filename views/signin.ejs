@@ -2,34 +2,71 @@
 <html lang="en">
 <head>
   <%- include('./partials/head') %>
-
- 
- <title>Signin</title>
+  <title>Sign In - PostForge</title>
 </head>
 <body>
-  
- <%- include('./partials/nav') %>
+  <%- include('./partials/nav') %>
 
-<div class="container mt-5">
-<form action="/user/signin" method="post">
+  <div class="main-content">
+    <div class="container">
+      <div class="auth-card">
+        <div class="text-center mb-4">
+          <div class="mb-3">
+            <i class="fas fa-lock-open" style="font-size: 4rem; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+          </div>
+          <h1 class="auth-title">Welcome Back!</h1>
+          <p style="color: #64748b; font-size: 1.1rem;">Sign in to continue your journey</p>
+        </div>
 
+        <form action="/user/signin" method="post">
+          <div class="mb-4">
+            <label for="email" class="form-label">
+              <i class="fas fa-envelope me-2" style="color: var(--primary);"></i>
+              Email Address
+            </label>
+            <input 
+              type="email" 
+              name="email" 
+              class="form-control" 
+              id="email" 
+              placeholder="your@email.com"
+              required>
+          </div>
 
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div class="mb-4">
+            <label for="password" class="form-label">
+              <i class="fas fa-key me-2" style="color: var(--primary);"></i>
+              Password
+            </label>
+            <input 
+              type="password" 
+              name="password" 
+              class="form-control" 
+              id="password" 
+              placeholder="Enter your password"
+              required>
+          </div>
+
+          <div class="d-grid mb-4">
+            <button type="submit" class="btn btn-primary btn-lg">
+              <i class="fas fa-sign-in-alt me-2"></i>
+              Sign In
+            </button>
+          </div>
+        </form>
+
+        <div style="text-align: center; padding-top: 20px; border-top: 2px solid rgba(99, 102, 241, 0.1);">
+          <p style="color: #64748b; margin: 0;">
+            Don't have an account? 
+            <a href="/user/signup" style="color: var(--primary); font-weight: 700; text-decoration: none;">
+              Create one here <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
-  </div>
- 
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-</div>
-
 
   <%- include('./partials/scripts') %>
-
 </body>
 </html>

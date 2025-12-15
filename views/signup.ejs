@@ -2,40 +2,89 @@
 <html lang="en">
 <head>
   <%- include('./partials/head') %>
-
- 
- <title>Signup</title>
+  <title>Sign Up - PostForge</title>
 </head>
 <body>
-  
- <%- include('./partials/nav') %>
+  <%- include('./partials/nav') %>
+
+  <div class="main-content">
+    <div class="container">
+      <div class="auth-card">
+        <div class="text-center mb-4">
+          <div class="mb-3">
+            <i class="fas fa-user-plus" style="font-size: 4rem; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+          </div>
+          <h1 class="auth-title">Join PostForge</h1>
+          <p style="color: #64748b; font-size: 1.1rem;">Start your storytelling journey today</p>
+        </div>
+
+        <form action="/user/signup" method="post">
+          <div class="mb-4">
+            <label for="fullname" class="form-label">
+              <i class="fas fa-user me-2" style="color: var(--primary);"></i>
+              Full Name
+            </label>
+            <input 
+              type="text" 
+              name="fullName" 
+              class="form-control" 
+              id="fullname" 
+              placeholder="Enter your full name"
+              required>
+          </div>
+
+          <div class="mb-4">
+            <label for="email" class="form-label">
+              <i class="fas fa-envelope me-2" style="color: var(--primary);"></i>
+              Email Address
+            </label>
+            <input 
+              type="email" 
+              name="email" 
+              class="form-control" 
+              id="email" 
+              placeholder="your@email.com"
+              required>
+          </div>
+
+          <div class="mb-4">
+            <label for="password" class="form-label">
+              <i class="fas fa-lock me-2" style="color: var(--primary);"></i>
+              Password
+            </label>
+            <input 
+              type="password" 
+              name="password" 
+              class="form-control" 
+              id="password" 
+              placeholder="Create a strong password"
+              required>
+            <div class="form-text mt-2">
+              <i class="fas fa-shield-alt me-1"></i>
+              Use at least 8 characters with letters, numbers & symbols
+            </div>
+          </div>
+
+          <div class="d-grid mb-4">
+            <button type="submit" class="btn btn-primary btn-lg">
+              <i class="fas fa-rocket me-2"></i>
+              Create Account
+            </button>
+          </div>
+        </form>
+
+        <div style="text-align: center; padding-top: 20px; border-top: 2px solid rgba(99, 102, 241, 0.1);">
+          <p style="color: #64748b; margin: 0;">
+            Already have an account? 
+            <a href="/user/signin" style="color: var(--primary); font-weight: 700; text-decoration: none;">
+              Sign in here <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <%- include('./partials/scripts') %>
-
-<div class="container mt-5">
-<form action="/user/signup" method="post">
-
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Full Name</label>
-    <input type="text" name="fullName" class="form-control" id="fullname" aria-describedby="emailHelp">
-   
-  </div>
-
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
-  </div>
- 
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-</div>
-
-
- 
-
 </body>
 </html>

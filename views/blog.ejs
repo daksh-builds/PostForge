@@ -1,53 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<%- include('./partials/head') %>
-  <title>BLOGS</title>
+  <%- include('./partials/head') %>
+  <title><%= blog.title %> - PostForge</title>
 </head>
 <body>
   <%- include('./partials/nav') %>
 
-<div class="container mt -4">
-  <h1><%= blog.title %></h1>
-  <img src="<%= blog.coverImageURL %>" width="700px" >
-  <pre class="mt -3" ><%= blog.body %></pre>
-</div>
+  <div class="main-content">
+    <div class="container">
+      <div class="content-wrapper" style="max-width: 1100px;">
+        
+        <div class="text-center mb-4">
+          <h1 class="blog-detail-title"><%= blog.title %></h1>
+        </div>
 
-<div class="container mt-4">
-  <img src="<%= blog.createdBy.profileImageURL%>"width="50px" ><%= blog.createdBy.fullName %>
-</div>
-<div class="container mt-3">
-  <h1>Comments(<%= comments.length %>)</h1>
-  <% if (locals.user) { %>
-   <form action="/blog/comment/<%= blog._id %>" method="post">
-    
-  <div class="mb-3">
-    <input type="text" name="content" class="form-control" placeholder="Enter your comment" >
+        <div class="author-card justify-content-center">
+          <img src="<%= blog.createdBy.profileImageURL %>" class="author-img" alt="<%= blog.createdBy.fullName %>">
+          <div>
+            <div class="author-name">
+              <i class="fas fa-user-edit me-2" style="color: var(--primary);"></i>
+              <%= blog.createdBy.fullName %>
+            </div>
+            <small style="color: #64748b; font-weight: 500;">
+              <i class="far fa-clock me-1"></i>
+              <%= new Date(blog.createdAt).toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+              }) %>
+            </small>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <img src="<%= blog.coverImageURL %>" class="blog-cover-image" alt="<%= blog.title %>">
+        </div>
+
+        <div class="blog-content">
+          <%= blog.body %>
+        </div>
+
+        <hr style="margin: 50px 0; border: none; height: 2px; background: linear-gradient(90deg, transparent, var(--primary), transparent);">
+
+        <div class="comment-section">
+          <h2 class="comment-title">
+            <i class="fas fa-comments me-3" style="color: var(--primary);"></i>
+            Comments 
+            <span style="color: var(--primary);">(<%= comments.length %>)</span>
+          </h2>
+
+          <% if (locals.user) { %>
+          <form action="/blog/comment/<%= blog._id %>" method="post" class="mb-5">
+            <div class="mb-3">
+              <label class="form-label fw-bold">
+                <i class="fas fa-comment-dots me-2" style="color: var(--primary);"></i>
+                Share Your Thoughts
+              </label>
+              <textarea 
+                name="content" 
+                class="form-control" 
+                rows="4" 
+                placeholder="What do you think about this story? Share your perspective..."
+                required
+                style="min-height: 120px;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane me-2"></i>
+              Post Comment
+            </button>
+          </form>
+          <% } else { %>
+          <div class="alert alert-info mb-5">
+            <i class="fas fa-info-circle me-2"></i>
+            <strong>Join the conversation!</strong> 
+            <a href="/user/signin" style="color: white; text-decoration: underline; font-weight: 700;">Sign in</a> 
+            to share your thoughts and engage with this story.
+          </div>
+          <% } %>
+
+          <div class="mt-5">
+            <% if (comments.length === 0) { %>
+              <div class="text-center py-5">
+                <i class="far fa-comment-alt" style="font-size: 4rem; color: var(--primary); opacity: 0.3;"></i>
+                <h4 class="mt-4" style="color: var(--dark); font-weight: 600;">No comments yet</h4>
+                <p class="text-muted">Be the first to share your thoughts on this story!</p>
+              </div>
+            <% } else { %>
+              <% comments.forEach((comment, index) => { %>
+              <div class="comment-item" style="animation: fadeInUp 0.5s ease-out <%= index * 0.1 %>s both;">
+                <div class="d-flex gap-3">
+                  <img src="<%= comment.createdBy.profileImageURL %>" class="author-img" alt="<%= comment.createdBy.fullName %>" style="width: 50px; height: 50px;">
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                      <div>
+                        <strong style="color: var(--dark); font-size: 1.1rem;">
+                          <%= comment.createdBy.fullName %>
+                        </strong>
+                        <div>
+                          <small style="color: #94a3b8;">
+                            <i class="far fa-clock me-1"></i>
+                            <%= new Date(comment.createdAt).toLocaleDateString('en-US', { 
+                              month: 'short', 
+                              day: 'numeric',
+                              year: 'numeric'
+                            }) %>
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                    <p style="color: #475569; font-size: 1rem; line-height: 1.7; margin: 0;">
+                      <%= comment.content %>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <% }) %>
+            <% } %>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="/" class="btn btn-outline-primary btn-lg">
+            <i class="fas fa-arrow-left me-2"></i>
+            Back to Stories
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
- 
- 
-  <button type="submit" class="btn btn-sm btn-primary">Add</button>
-</form>
-  <% } %>
 
-<div class="mt-3">
-  <% comments.forEach(comment => { %>
-   <div>
-      <img src="<%= comment.createdBy.profileImageURL%>"width="50px" ><%= comment.createdBy.fullName %>
-      <pre><%= comment.content %></pre>
-   </div>
-
-
-
-  <% }) %>
-</div>
-
-
-
-</div>
   <%- include('./partials/scripts') %>
-
-
 </body>
 </html>
