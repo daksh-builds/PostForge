@@ -26,7 +26,9 @@ app.use(express.json());
 app.use(checkForAuthenticationCookie("token"));
 
 mongoose.connect(process.env.MONGO_URL)
-.then(e=>console.log("Mongodb Connected"));
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.error("MongoDB Error:", err));
+
 
 app.set("view engine","ejs");
 app.set("views",path.resolve("./views"));
@@ -45,4 +47,4 @@ app.use("/user",userRoute);
 app.use("/blog",blogRoute);
 
 
-app.listen(PORT,()=>console.log(`sever started at ${PORT}`));
+module.exports=app;
