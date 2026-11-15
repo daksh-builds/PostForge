@@ -29,7 +29,7 @@ mongoose.connect(process.env.MONGO_URL)
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.error("MongoDB Error:", err));
 
-
+  
 app.set("view engine","ejs");
 app.set("views",path.resolve("./views"));
 
@@ -47,4 +47,4 @@ app.use("/user",userRoute);
 app.use("/blog",blogRoute);
 
 
-module.exports=app;
+app.listen(PORT,()=>console.log(`sever started at ${PORT}`));
