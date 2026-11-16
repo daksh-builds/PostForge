@@ -1,0 +1,200 @@
+[
+{
+  "_id": {
+    "$oid": "6918aa7114935aa51c2e9a64"
+  },
+  "fullName": "Daksh Panwar",
+  "email": "hello@gmail.com",
+  "password": "475b5f4ca6261d57a609b1cc8bae98a1d6ff27596a355c4c370f2d84d62a4086",
+  "profileImageURL": "/images/Default-Avatar.png",
+  "role": "USER",
+  "createdAt": {
+    "$date": "2025-11-15T16:29:37.582Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-15T16:29:37.582Z"
+  },
+  "salt": "�9]I�XA?�ZY��A",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6918ac67c9cb55b28195ed7d"
+  },
+  "fullName": "daksh",
+  "email": "daksh@gmail.com",
+  "password": "5aa586f0b646560416611b3a2e3f2bbcf87b51b5e71ec57065e3cf0eeccb1cd3",
+  "profileImageURL": "/images/Default-Avatar.png",
+  "role": "USER",
+  "createdAt": {
+    "$date": "2025-11-15T16:37:59.571Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-15T16:37:59.571Z"
+  },
+  "salt": "P���n/v�9'\u001eX+T��",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6918ad92958f04cbbacb9963"
+  },
+  "fullName": "Daksh Panwar",
+  "email": "world@gmail.com",
+  "password": "73584f676ac5852d2af356a5e0d7f52f8033e1d0ce107669e22a921d5fb9a492",
+  "profileImageURL": "/images/Default-Avatar.png",
+  "role": "USER",
+  "createdAt": {
+    "$date": "2025-11-15T16:42:58.699Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-15T16:42:58.699Z"
+  },
+  "salt": "I<�\u00067B��@n��#��q",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691c1e8ddacc63d30e50b770"
+  },
+  "fullName": "sheesh",
+  "email": "sheesh@gmail.com",
+  "password": "ae71ba8166d7065b901eb8de9a8c9eec8a12068b27afd05755958e6535212db5",
+  "profileImageURL": "/images/Default-Avatar.png",
+  "role": "USER",
+  "createdAt": {
+    "$date": "2025-11-18T07:21:49.814Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-18T07:21:49.814Z"
+  },
+  "salt": "�` >'8=�|�\u001cEq$K�",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691c1f66172f3ac2056b52cc"
+  },
+  "fullName": "yo",
+  "email": "yo@gmail.com",
+  "password": "f56aedb905b34d281e3065c071d9fb4dda5c914b814cc23bc6f32f72b7cc74a1",
+  "profileImageURL": "/images/Default-Avatar.png",
+  "role": "USER",
+  "createdAt": {
+    "$date": "2025-11-18T07:25:26.243Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-18T07:25:26.243Z"
+  },
+  "salt": "�V�cG�Z�B����4w�",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6922ac0278ea0f23ca19f2b6"
+  },
+  "fullName": "hello",
+  "email": "user@gmail.com",
+  "password": "bdb535bfcdb2b90b40352170b5c7f032855101ca9e0cec60338a63246d8c92f0",
+  "profileImageURL": "/images/Default-Avatar.png",
+  "role": "USER",
+  "createdAt": {
+    "$date": "2025-11-23T06:38:58.988Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-23T06:38:58.988Z"
+  },
+  "salt": "����y�}��I�G+nt*",
+  "__v": 0
+},
+
+{
+  "_id": {
+    "$oid": "693fd0a54e00dba1111968ad"
+  },
+  "fullName": "Daksh pawar",
+  "email": "hi@gmail.com",
+  "password": "420fc120179bd1626e0bd29992e1b5bd1ebff0442164652bb248de905a785a23",
+  "profileImageURL": "/images/Default-Avatar.png",
+  "role": "USER",
+  "createdAt": {
+    "$date": "2025-12-15T09:11:01.546Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-15T09:11:01.546Z"
+  },
+  "salt": "\u0013�\u0004\r�1�\u0003郩��H\u001b",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6940e26b9c1241bd59d07289"
+  },
+  "fullName": "hello",
+  "email": "exampleee@gmail.com",
+  "password": "549367798987667347b5d5aa443f22f23ea7ba7f9188ce9c5ecf46e0cd46c90b",
+  "profileImageURL": "/images/Default-Avatar.png",
+  "role": "USER",
+  "createdAt": {
+    "$date": "2025-12-16T04:39:07.771Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-16T04:39:07.771Z"
+  },
+  "salt": "gP�C\u0001��9cI���?\u0017\u0000",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6940f83332eb6190dfbbc818"
+  },
+  "fullName": "Daksh Panwar",
+  "email": "daksh.panwar.cse.2024@miet.ac.in",
+  "password": "6e9792f6ceba9c635a6c73d7033cd39bc8757feb5a67059fe2a60dff1c919865",
+  "profileImageURL": "/images/Default-Avatar.png",
+  "role": "USER",
+  "createdAt": {
+    "$date": "2025-12-16T06:12:03.630Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-16T06:12:03.630Z"
+  },
+  "salt": "Qֿh]%J/���R�\u001aLg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69e6145841bb7383b258d4c7"
+  },
+  "fullName": "Daksh Panwar",
+  "email": "1234@gmail.com",
+  "password": "7eb816a6b1a1f9377b6d91c751c229a1f97794b9dfd34fbbb1a3284f3d1f6d54",
+  "profileImageURL": "/images/Default-Avatar.png",
+  "role": "USER",
+  "createdAt": {
+    "$date": "2026-04-20T11:56:08.179Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-20T11:56:08.179Z"
+  },
+  "salt": "\u0002�`�\u0017��ZD�\u0006\u0004'�",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6af9ea18ab826441a433f8f9"
+  },
+  "fullName": "bot1",
+  "email": "bot1@gmail.com",
+  "password": "96d6c6846db70241140af34033c0abe467a0e1a007c82c1d6b74dbdf40edd487",
+  "profileImageURL": "/images/Default-Avatar.png",
+  "role": "USER",
+  "createdAt": {
+    "$date": "2026-11-15T17:21:28.811Z"
+  },
+  "updatedAt": {
+    "$date": "2026-11-15T17:21:28.811Z"
+  },
+  "salt": "?���rV�>\u001b�\f�I��X",
+  "__v": 0
+}]
